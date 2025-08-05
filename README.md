@@ -34,7 +34,7 @@ AI Travel Planner is a mobile application that helps users plan trips effortless
 - OpenAI API Key
 - Android/iOS emulator or device for React Native
 
-### Backend Setup
+### Setup
 
 ```bash
 git clone https://github.com/ShireenShamil/AI-Travel-Planner-App.git
