@@ -1,25 +1,36 @@
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 
+export type HomeStackParamList = {
+    HomeMain: undefined;
+    NewTrip: undefined;
+    PlanTrip: {trip:any};
+    AIChat: undefined;
+    MapScreen: undefined;
+}
+
+export type TabNavigatorParamList = {
+    Home: undefined;
+    Guides: undefined;
+    Profile : undefined;
+}
+
+type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList & TabNavigatorParamList>
 const HomeStack = () => {
+
+    const Navigation = useNavigation();
+
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Home Stack</Text>
-        </View>
+        <SafeAreaView>
+            <Text>Home Stack</Text>
+        </SafeAreaView>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#fff',
-    },
-    text: {
-        fontSize: 24,
-        fontWeight: 'bold',
-    },
+   
 });
 
 export default HomeStack;
